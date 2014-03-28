@@ -4,7 +4,7 @@
 // https://github.com/Miserlou/OpenSpritz
 
 // Please don't abuse this.
-var readability_token = '172b057cd7cfccf27b60a36f16b1acde12783893';
+//var readability_token = '172b057cd7cfccf27b60a36f16b1acde12783893';
 var diffbot_token = '2efef432c72b5a923408e04353c39a7c';
 
 function create_spritz(){
@@ -233,7 +233,7 @@ function pivot(word){
 // Get the currently selected text, if any.
 // Shameless pinched from StackOverflow.
 function getSelectionText() {
-    var text = "test with a string of text to see if it works";
+    var text = "";
     if (typeof window.getSelection != "undefined") {
         var sel = window.getSelection();
         if (sel.rangeCount) {
