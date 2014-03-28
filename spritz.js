@@ -18,7 +18,7 @@ function create_spritz(){
         //getURL("spritz.html", function(data){
 
         //getURL("https://rawgithub.com/Miserlou/OpenSpritz/dev/spritz.html", function(data){
-        getURL("https://rawgithub.com/Miserlou/OpenSpritz/master/spritz.html", function(data){
+        getURL("https://rawgithub.com/LostInInaka/OpenSpritz/master/spritz.html", function(data){
             var spritzContainer = document.getElementById("spritz_container");
 
             if (!spritzContainer) {
@@ -71,6 +71,7 @@ function spritz(){
     if(selection){
         spritzify(selection);
     }
+    
     else{
         spritzifyURL();
     }
@@ -80,8 +81,9 @@ function spritz(){
 function spritzify(input){
 
     var wpm = parseInt(document.getElementById("spritz_selector").value, 10);
-    var ms_per_word = 60000/wpm;
-
+    //var ms_per_word = 60000/wpm;
+    var ms_per_word = 40000/wpm;
+    
     // Split on any spaces.
     var all_words = input.split(/\s+/);
 
@@ -231,7 +233,7 @@ function pivot(word){
 // Get the currently selected text, if any.
 // Shameless pinched from StackOverflow.
 function getSelectionText() {
-    var text = "";
+    var text = "test with a string of text to see if it works";
     if (typeof window.getSelection != "undefined") {
         var sel = window.getSelection();
         if (sel.rangeCount) {
